@@ -3,7 +3,7 @@ import Quagga from '@ericblade/quagga2';
 
 interface ScannerConfig {
   inputStream: {
-    type: string;
+    type: 'LiveStream';
     constraints: {
       width: number;
       height: number;
@@ -38,8 +38,8 @@ export const initBarcodeScanner = (elementId: string): Promise<void> => {
     inputStream: {
       type: 'LiveStream',
       constraints: {
-        width: { min: 640 },
-        height: { min: 480 },
+        width: 640,
+        height: 480,
         facingMode: 'environment',
       },
       area: {
@@ -61,7 +61,7 @@ export const initBarcodeScanner = (elementId: string): Promise<void> => {
   };
 
   return new Promise((resolve, reject) => {
-    Quagga.init(config, (err) => {
+    Quagga.init(config as Quagga.QuaggaJSConfigObject, (err) => {
       if (err) {
         console.error('Error initializing Quagga:', err);
         reject(err);

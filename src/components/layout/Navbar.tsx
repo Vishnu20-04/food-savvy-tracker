@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Home, BarcodeScan, Plus, ClipboardList } from 'lucide-react';
+import { Home, Barcode, Plus, ClipboardList } from 'lucide-react';
 
 const Navbar = () => {
   const location = useLocation();
@@ -16,7 +16,7 @@ const Navbar = () => {
       
       <div className="flex justify-around items-center md:space-x-4">
         <NavItem to="/" icon={<Home />} label="Home" isActive={isActive('/')} />
-        <NavItem to="/scan" icon={<BarcodeScan />} label="Scan" isActive={isActive('/scan')} />
+        <NavItem to="/scan" icon={<Barcode />} label="Scan" isActive={isActive('/scan')} />
         <NavItem to="/add" icon={<Plus />} label="Add" isActive={isActive('/add')} />
         <NavItem to="/dashboard" icon={<ClipboardList />} label="Items" isActive={isActive('/dashboard')} />
       </div>

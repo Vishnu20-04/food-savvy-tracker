@@ -3,7 +3,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { BarcodeScan, Plus, ClipboardList } from 'lucide-react';
+import { Barcode, Plus, ClipboardList } from 'lucide-react';
 import ExpiryNotification from '@/components/notifications/ExpiryNotification';
 
 const Home = () => {
@@ -19,12 +19,12 @@ const Home = () => {
       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
         <Card className="hover:shadow-md transition-shadow">
           <CardContent className="p-6 flex flex-col items-center text-center">
-            <BarcodeScan className="h-12 w-12 mb-4 text-primary" />
+            <Barcode className="h-12 w-12 mb-4 text-primary" />
             <h2 className="text-lg font-semibold mb-2">Scan Barcode</h2>
             <p className="text-gray-600 mb-4">Scan packaged food items with your camera</p>
             <Link to="/scan">
               <Button>
-                <BarcodeScan className="mr-2 h-4 w-4" />
+                <Barcode className="mr-2 h-4 w-4" />
                 Scan Item
               </Button>
             </Link>
